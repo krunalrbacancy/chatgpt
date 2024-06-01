@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatGPT</title>
+  <meta name="title" content="ChatGPT: Get instant answers, find inspiration, learn something new" />
+  <meta name="description" content="ChatGPT is a free-to-use AI system. Use it for engaging conversations, gain insights, automate tasks, and witness the future of AI, all in one place." />
+  <meta
+      name="keywords"
+      content="ai chat,ai,chap gpt,chat gbt,chat gpt 3,chat gpt login,chat gpt website,chat gpt,chat gtp,chat openai,chat,chatai,chatbot gpt,chatg,chatgpt login,chatgpt,gpt chat,open ai,openai chat,openai chatgpt,openai"
+  />
+  <meta property="og:description" content="A conversational AI system that listens, learns, and challenges" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta property="og:title" content="ChatGPT" />
+  <meta property="og:image" content="./images/og-image.png" />
+  <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="relative z-0 flex h-full w-full overflow-hidden">
+    <aside class="flex-shrink-0 overflow-x-hidden bg-[#f9f9f9]" style="width: 260px; visibility: visible;">
+      <div class="h-full w-[260px]">
+          <div class="flex h-full min-h-0 flex-col">
+              <div class="relative h-full w-full flex-1 items-start border-white/20">
+                  <nav class="flex h-full w-full flex-col px-3 pb-0" aria-label="Chat history">
+                      <div id="toggle-btns" class="flex h-14 items-center justify-between">
+                            <button data-tooltip-target="close-sidebar" id="toggle-sidebar" class="h-10 rounded-lg px-2 text-[#7d7d7d] hover:bg-[#ececec] focus-visible:bg-[#ececec] focus-visible:outline-0">
+                                <img width="24" height="" src="./images/collapes.svg" alt="Collapes">
+                            </button>
+                            <div id="close-sidebar" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                Close sidebar
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+
+                            <button class="h-10 rounded-lg px-2 text-[#7d7d7d] hover:bg-[#ececec] focus-visible:bg-[#ececec] focus-visible:outline-0" data-tooltip-target="tooltip-new-chat">
+                                <img width="24" height="24" class="add-new-chat" src="./images/new-chat.svg" alt="New Chat">
+                            </button>
+                            <div id="tooltip-new-chat" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                            New Chat
+                            <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                      </div>
+                      <div class="-mr-2 flex-1 flex-col overflow-y-scroll overflow-x-hidden pr-2 transition-opacity duration-500">
+                          <div class="sticky left-0 right-0 top-0 z-20 bg-[#f9f9f9] pt-3.5 md:static md:pt-0">
+                              <div class="pb-0.5 md:pb-0" tabindex="0">
+                                  <a href="/" class="group flex h-10 items-center gap-2 rounded-lg bg-[#f9f9f9] px-2 font-semibold hover:bg-[#ececec] md:gap-2.5 md:font-normal">
+                                      <div class="h-6 w-6 flex-shrink-0">
+                                          <div class="relative flex h-full items-center justify-center rounded-full bg-white text-[#0d0d0d]">
+                                              <img width="41" height="41" class="h-2/3 w-2/3" src="./images/chatgpt-shape.svg" alt="Shape" />
+                                          </div>
+                                      </div>
+                                      <div class="text-[#0d0d0d] grow overflow-hidden text-ellipsis whitespace-nowrap text-sm">
+                                          ChatGPT
+                                      </div>
+                                      <div class="flex gap-3 md:gap-2">
+                                          <span class="flex items-center" data-state="closed">
+                                              <button class="text-token-text-tertiary invisible hover:text-[#7d7d7d] group-hover:visible md:text-[#7d7d7d]">
+                                                  <img width="18" height="18" src="./images/edit.svg" alt="" />
+                                              </button>
+                                          </span>
+                                      </div>
+                                  </a>
+                              </div>
+                          </div>
+                          <div type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1t9:" data-state="closed" tabindex="0">
+                              <a href="/gpts">
+                                  <button class="flex h-10 w-full items-center gap-2 rounded-lg px-2 font-medium text-[#0d0d0d] hover:bg-[] md:gap-2.5 md:font-normal">
+                                      <div class="text-text-[#7d7d7d] flex h-6 w-6 items-center justify-center">
+                                          <img width="18" height="18" src="./images/expolore.svg" alt="expolore" />
+                                      </div>
+                                      <span class="text-sm">Explore GPTs</span>
+                                  </button>
+                              </a>
+                          </div>
+                          <div class="text-[#0d0d0d] flex flex-col gap-2 pb-2 text-sm md:mt-5">
+                                <div class="relative mt-5 empty:mt-0 empty:hidden md:first:mt-0 md:last:mb-5">
+                                    <div class="md:bg-token-sidebar-surface-primary md:sticky md:top-0 md:z-20">
+                                        <span class="flex h-9 items-center">
+                                            <h3 class="text-[#7d7d7d] overflow-hidden text-ellipsis break-all px-2 pb-2 pt-3 text-xs font-semibold">
+                                                Yesterday
+                                            </h3>
+                                        </span>
+                                    </div>
+                                    <ol>
+                                        <li class="relative z-[15]">
+                                            <div class="group relative rounded-lg hover:bg-[#ececec] active:opacity-90">
+                                                <a href="/da775" class="flex items-center gap-2 p-2">
+                                                    <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
+                                                        Animate SVG
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                    </div>
+                                                </a>
+                                                    <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
+                                                        <span data-dropdown-toggle="dropdown" data-dropdown-trigger="click">
+                                                        <button
+                                                                data-tooltip-target="tooltip-options1" 
+                                                            class="text-[#0d0d0d] hover:text-[#7d7d7d] radix-state-open:text-[#7d7d7d] md:text-[#7d7d7d] md:hover:text-[#0d0d0d] flex items-center justify-center transition"
+                                                            type="button"
+                                                            id="radix-:r2st:"
+                                                            aria-haspopup="menu"
+                                                            aria-expanded="false"
+                                                            data-state="closed"
+                                                        >
+                                                            <img width="18" height="18" src="./images/3-dots.svg" alt="Dots" />
+                                                        </button>
+                                                            <div id="tooltip-options1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                                Options
+                                                                <div class="tooltip-arrow" data-popper-arrow></div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                    <!-- Dropdown menu -->
+                                                    <div id="dropdown" class="z-30 min-w-32 hidden border border-black/[0.1] bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-700">
+                                                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                                                            <li>
+                                                                <a href="#" class="flex items-center text-sm p-3 gap-2 text-[#7d7d7d] hover:bg-[#f5f5f5] dark:hover:bg-gray-600 dark:hover:text-white"><img width="20" h
+                                                                    20 src="./images/share.svg" alt="Share"> Share</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="flex items-center text-sm p-3 gap-2 text-[#7d7d7d] hover:bg-[#f5f5f5] dark:hover:bg-gray-600 dark:hover:text-white"><img width="20" h
+                                                                    20 src="./images/pencil.svg" alt="Rename"> Rename</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="flex items-center text-sm p-3 gap-2 text-[#7d7d7d] hover:bg-[#f5f5f5] dark:hover:bg-gray-600 dark:hover:text-white"><img width="20" h
+                                                                    20 src="./images/archive.svg" alt="Archive"> Archive</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" class="flex items-center text-sm p-3 gap-2 hover:bg-[#f5f5f5] dark:hover:bg-gray-600 dark:hover:text-white text-[#f93a37]"><img width="20" h
+                                                                    20 src="./images/delete.svg" alt="Delete"> Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="relative mt-5 empty:mt-0 empty:hidden md:first:mt-0 md:last:mb-5">
+                                    <div class="md:bg-token-sidebar-surface-primary md:sticky md:top-0 md:z-10">
+                                        <span class="flex h-9 items-center">
+                                            <h3 class="text-[#7d7d7d] overflow-hidden text-ellipsis break-all px-2 pb-2 pt-3 text-xs font-semibold">
+                                                Previous 4 Days
+                                            </h3>
+                                        </span>
+                                    </div>
+                                    <ol>
+                                        <li class="relative z-10">
+                                            <div class="group relative rounded-lg hover:bg-[#ececec] active:opacity-90">
+                                                <a href="/da775" class="flex items-center gap-2 p-2">
+                                                    <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
+                                                        Animate SVG with javascript on scroll
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                    </div>
+                                                </a>
+                                                <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
+                                                    <span class="" data-state="closed">
+                                                        <button
+                                                        data-tooltip-target="tooltip-options2" 
+                                                            class="text-[#0d0d0d] hover:text-[#7d7d7d] radix-state-open:text-[#7d7d7d] md:text-[#7d7d7d] md:hover:text-[#0d0d0d] flex items-center justify-center transition"
+                                                            type="button"
+                                                            id="radix-:r2st:"
+                                                            aria-haspopup="menu"
+                                                            aria-expanded="false"
+                                                            data-state="closed"
+                                                        >
+                                                            <img width="18" height="18" src="./images/3-dots.svg" alt="Dots" />
+                                                        </button>
+                                                        <div id="tooltip-options2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Options
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="relative mt-5 empty:mt-0 empty:hidden md:first:mt-0 md:last:mb-5">
+                                    <div class="md:bg-token-sidebar-surface-primary md:sticky md:top-0 md:z-10">
+                                        <span class="flex h-9 items-center">
+                                            <h3 class="text-[#7d7d7d] overflow-hidden text-ellipsis break-all px-2 pb-2 pt-3 text-xs font-semibold">
+                                                Previous 4 Days
+                                            </h3>
+                                        </span>
+                                    </div>
+                                    <ol>
+                                        <li class="relative z-10">
+                                            <div class="group relative rounded-lg hover:bg-[#ececec] active:opacity-90">
+                                                <a href="/da775" class="flex items-center gap-2 p-2">
+                                                    <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
+                                                        Animate SVG with javascript on scroll
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                    </div>
+                                                </a>
+                                                <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
+                                                    <span class="" data-state="closed">
+                                                        <button
+                                                        data-tooltip-target="tooltip-options2" 
+                                                            class="text-[#0d0d0d] hover:text-[#7d7d7d] radix-state-open:text-[#7d7d7d] md:text-[#7d7d7d] md:hover:text-[#0d0d0d] flex items-center justify-center transition"
+                                                            type="button"
+                                                            id="radix-:r2st:"
+                                                            aria-haspopup="menu"
+                                                            aria-expanded="false"
+                                                            data-state="closed"
+                                                        >
+                                                            <img width="18" height="18" src="./images/3-dots.svg" alt="Dots" />
+                                                        </button>
+                                                        <div id="tooltip-options2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                        Options
+                                                        <div class="tooltip-arrow" data-popper-arrow></div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="relative mt-5 empty:mt-0 empty:hidden md:first:mt-0 md:last:mb-5">
+                                    <div class="md:bg-token-sidebar-surface-primary md:sticky md:top-0 md:z-10">
+                                        <span class="flex h-9 items-center">
+                                            <h3 class="text-[#7d7d7d] overflow-hidden text-ellipsis break-all px-2 pb-2 pt-3 text-xs font-semibold">
+                                                Previous 4 Days
+                                            </h3>
+                                        </span>
+                                    </div>
+                                    <ol>
+                                        <li class="relative z-10">
+                                            <div class="group relative rounded-lg hover:bg-[#ececec] active:opacity-90">
+                                                <a href="/da775" class="flex items-center gap-2 p-2">
+                                                    <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
+                                                        Animate SVG with javascript on scroll
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                    </div>
+                                                </a>
+                                                <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
+                                                    <span class="" data-state="closed">
+                                                        <button
+                                                        data-tooltip-target="tooltip-options2" 
+                                                            class="text-[#0d0d0d] hover:text-[#7d7d7d] radix-state-open:text-[#7d7d7d] md:text-[#7d7d7d] md:hover:text-[#0d0d0d] flex items-center justify-center transition"
+                                                            type="button"
+                                                            id="radix-:r2st:"
+                                                            aria-haspopup="menu"
+                                                            aria-expanded="false"
+                                                            data-state="closed"
+                                                        >
+                                                            <img width="18" height="18" src="./images/3-dots.svg" alt="Dots" />
+                                                        </button>
+                                                        <div id="tooltip-options2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                        Options
+                                                        <div class="tooltip-arrow" data-popper-arrow></div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="relative mt-5 empty:mt-0 empty:hidden md:first:mt-0 md:last:mb-5">
+                                    <div class="md:bg-token-sidebar-surface-primary md:sticky md:top-0 md:z-10">
+                                        <span class="flex h-9 items-center">
+                                            <h3 class="text-[#7d7d7d] overflow-hidden text-ellipsis break-all px-2 pb-2 pt-3 text-xs font-semibold">
+                                                Previous 4 Days
+                                            </h3>
+                                        </span>
+                                    </div>
+                                    <ol>
+                                        <li class="relative z-10">
+                                            <div class="group relative rounded-lg hover:bg-[#ececec] active:opacity-90">
+                                                <a href="/da775" class="flex items-center gap-2 p-2">
+                                                    <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
+                                                        Animate SVG with javascript on scroll
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                    </div>
+                                                </a>
+                                                <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
+                                                    <span class="" data-state="closed">
+                                                        <button
+                                                        data-tooltip-target="tooltip-options2" 
+                                                            class="text-[#0d0d0d] hover:text-[#7d7d7d] radix-state-open:text-[#7d7d7d] md:text-[#7d7d7d] md:hover:text-[#0d0d0d] flex items-center justify-center transition"
+                                                            type="button"
+                                                            id="radix-:r2st:"
+                                                            aria-haspopup="menu"
+                                                            aria-expanded="false"
+                                                            data-state="closed"
+                                                        >
+                                                            <img width="18" height="18" src="./images/3-dots.svg" alt="Dots" />
+                                                        </button>
+                                                        <div id="tooltip-options2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                        Options
+                                                        <div class="tooltip-arrow" data-popper-arrow></div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="relative z-10">
+                                            <div class="group relative rounded-lg hover:bg-[#ececec] active:opacity-90">
+                                                <a href="/da775" class="flex items-center gap-2 p-2">
+                                                    <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
+                                                        Animate SVG with javascript on scroll
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                    </div>
+                                                </a>
+                                                <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
+                                                    <span class="" data-state="closed">
+                                                        <button
+                                                        data-tooltip-target="tooltip-options2" 
+                                                            class="text-[#0d0d0d] hover:text-[#7d7d7d] radix-state-open:text-[#7d7d7d] md:text-[#7d7d7d] md:hover:text-[#0d0d0d] flex items-center justify-center transition"
+                                                            type="button"
+                                                            id="radix-:r2st:"
+                                                            aria-haspopup="menu"
+                                                            aria-expanded="false"
+                                                            data-state="closed"
+                                                        >
+                                                            <img width="18" height="18" src="./images/3-dots.svg" alt="Dots" />
+                                                        </button>
+                                                        <div id="tooltip-options2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                        Options
+                                                        <div class="tooltip-arrow" data-popper-arrow></div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="relative z-10">
+                                            <div class="group relative rounded-lg hover:bg-[#ececec] active:opacity-90">
+                                                <a href="/da775" class="flex items-center gap-2 p-2">
+                                                    <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
+                                                        Animate SVG with javascript on scroll
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                    </div>
+                                                </a>
+                                                <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
+                                                    <span class="" data-state="closed">
+                                                        <button
+                                                        data-tooltip-target="tooltip-options2" 
+                                                            class="text-[#0d0d0d] hover:text-[#7d7d7d] radix-state-open:text-[#7d7d7d] md:text-[#7d7d7d] md:hover:text-[#0d0d0d] flex items-center justify-center transition"
+                                                            type="button"
+                                                            id="radix-:r2st:"
+                                                            aria-haspopup="menu"
+                                                            aria-expanded="false"
+                                                            data-state="closed"
+                                                        >
+                                                            <img width="18" height="18" src="./images/3-dots.svg" alt="Dots" />
+                                                        </button>
+                                                        <div id="tooltip-options2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                        Options
+                                                        <div class="tooltip-arrow" data-popper-arrow></div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="relative z-10">
+                                            <div class="group relative rounded-lg hover:bg-[#ececec] active:opacity-90">
+                                                <a href="/da775" class="flex items-center gap-2 p-2">
+                                                    <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
+                                                        Animate SVG with javascript on scroll
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                    </div>
+                                                </a>
+                                                <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
+                                                    <span class="" data-state="closed">
+                                                        <button
+                                                        data-tooltip-target="tooltip-options2" 
+                                                            class="text-[#0d0d0d] hover:text-[#7d7d7d] radix-state-open:text-[#7d7d7d] md:text-[#7d7d7d] md:hover:text-[#0d0d0d] flex items-center justify-center transition"
+                                                            type="button"
+                                                            id="radix-:r2st:"
+                                                            aria-haspopup="menu"
+                                                            aria-expanded="false"
+                                                            data-state="closed"
+                                                        >
+                                                            <img width="18" height="18" src="./images/3-dots.svg" alt="Dots" />
+                                                        </button>
+                                                        <div id="tooltip-options2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                        Options
+                                                        <div class="tooltip-arrow" data-popper-arrow></div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                          </div>
+                      </div>
+                        <div class="flex flex-col pt-2 empty:hidden md:py-2 dark:border-white/20">
+                            <a href="/" class="hover:bg-[#ececec] group m-0 flex cursor-pointer items-center gap-2 rounded-lg p-2.5 px-2 text-sm">
+                                <span class="flex w-full flex-row flex-wrap-reverse justify-between">
+                                    <div class="flex items-center gap-2">
+                                        <span class="border-inherit flex h-7 w-7 items-center justify-center rounded-full border"><img width="16" height="16" src="./images/star.svg" alt="Star" /></span>
+                                        <div class="flex flex-col"><span>Upgrade plan</span><span class="text-[#b4b4b4] line-clamp-1 text-xs">Get GPT-4, DALL·E, and more</span></div>
+                                    </div>
+                                </span>
+                            </a>
+                        </div>
+                  </nav>
+              </div>
+          </div>
+      </div>
+    </aside>
+    <div class="relative flex h-full max-w-full flex-1 flex-col overflow-hidden">
+      <main class="relative h-full w-full flex-1 overflow-auto transition-width">
+        <div class="flex h-full flex-col focus-visible:outline-0" role="presentation" tabindex="0">
+          <div class="flex-1 overflow-hidden">
+            <div class="relative h-full overflow-y-scroll">
+                <div class="sticky top-0 md:p-3 mb-1.5 flex items-center justify-between z-10 h-14 p-2 font-semibold bg-white">
+                    <div class="absolute start-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2"></div>
+                    <div class="flex items-center gap-2 overflow-hidden md:gap-0">
+                        <div id="show-toggle" class="hidden">
+                            <button data-tooltip-target="open-sidebar" id="show-toggle-btn" class="h-10 rounded-lg px-2 text-[#7d7d7d] hover:bg-[#ececec] focus-visible:bg-[#ececec] focus-visible:outline-0">
+                                <img width="24" height="" src="./images/collapes.svg" alt="Collapes">
+                            </button>
+                            <div id="open-sidebar" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                Open sidebar
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+
+                            <button data-tooltip-target="new-chat" class="h-10 rounded-lg px-2 text-[#7d7d7d] hover:bg-[#ececec] focus-visible:bg-[#ececec] focus-visible:outline-0" data-tooltip-target="tooltip-new-chat">
+                                <img width="24" height="24" class="add-new-chat" src="./images/new-chat.svg" alt="New Chat">
+                            </button>
+                            <div id="new-chat" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                New chat
+                                <div class="tooltip-arrow" data-popper-arrow></div>
+                            </div>
+                        </div>
+                      <div
+                          type="button"
+                          data-dropdown-toggle="dropdown1" data-dropdown-trigger="click"
+                          class="group flex cursor-pointer items-center gap-1 rounded-xl py-2 px-3 text-lg font-semibold hover:bg-[#f9f9f9] md:text-[#7d7d7d] md:rounded-lg md:py-1.5 overflow-hidden whitespace-nowrap"
+                      >
+                          <div class="md:text-[#7d7d7d]">ChatGPT <span class="text-[#7d7d7d]"></span></div>
+                          <img width="18" height="18" src="./images/down-arrow.svg" alt="Arrow">
+
+                          <!-- Dropdown menu -->
+                          <div id="dropdown1" class="z-30 text-[#0d0d0d] min-w-36 py-2 hidden border border-black/[0.1] bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-700">
+                            <div class="flex items-center m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 gap-2.5 py-3 !pr-3">
+                                <div class="flex grow items-center justify-between gap-2">
+                                    <div class="flex items-center gap-3">
+                                        <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#ececec]">
+                                            <img width="16" height="16" src="./images/star.svg" alt="Start">
+                                        </span>
+                                        <div class="font-normal">ChatGPT Plus<div class="text-[#b4b4b4] font-normal md:text-xs">Our smartest model &amp; more</div></div>
+                                    </div>
+                                    <button class="btn relative btn-secondary btn-small">
+                                        <div class="flex w-full gap-2 items-center justify-center">Upgrade</div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 gap-2.5 py-3 !pr-3">
+                                <div class="flex grow items-center justify-between gap-2">
+                                    <div class="flex items-center gap-3">
+                                        <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#ececec]">
+                                            <img width="16" height="16" src="./images/tasks.svg" alt="Tasks">
+                                        </span>
+                                        <div class="font-normal">ChatGPT<div class="text-[#b4b4b4] font-normal md:text-xs">Great for everyday tasks</div></div>
+                                    </div>
+                                    <img width="18" height="18" src="./images/tick-mark.svg" alt="Tick">
+                                </div>
+                            </div>
+                            <div role="separator" aria-orientation="horizontal" class="my-1.5 h-[1px] bg-token-border-light juice:mx-5 juice:my-1"></div>
+                            <div class="flex items-center m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 gap-2.5 py-3 !pr-3">
+                                <div class="flex items-center justify-center text-token-text-secondary h-5 w-7">
+                                    <img width="20" height="20" src="./images/temporary-chat.svg" alt="Temporary Chat">
+                                </div>
+                                <div class="flex grow items-center justify-between gap-2">
+                                    <div class="flex flex-1 items-center gap-3">Temporary chat</div>
+                                    <label class="inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" value="" class="sr-only peer">
+                                        <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#10a37f]"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex gap-2 pr-1">
+                        <button class="h-10 rounded-lg px-2 text-[#7d7d7d] focus-visible:outline-0 hover:bg-[#f9f9f9] focus-visible:bg-[#f9f9f9]">
+                            <img width="24" height="24" src="./images/share.svg" alt="Share">
+                        </button>
+                        <button
+                            data-testid="fruit-md-profile"
+                            class="flex h-10 w-10 items-center justify-center rounded-full hover:bg-[#f9f9f9] focus-visible:bg-[#f9f9f9] focus-visible:outline-0"
+                            type="button"
+                            id="radix-:r4:"
+                            aria-haspopup="menu"
+                            aria-expanded="false"
+                            data-state="closed"
+                        >
+                            <div class="flex items-center justify-center overflow-hidden rounded-full">
+                              <div class="relative flex">
+                                <img
+                                    alt="User"
+                                    loading="lazy"
+                                    width="32"
+                                    height="32"
+                                    class="rounded-sm"
+                                    src="https://lh3.googleusercontent.com/a/ACg8ocIdhtJNJGpdyJ3iyKi-udrC45YMiBPbDt4E6G6oKonA=s96-c"
+                                />
+                              </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Intial Part -->
+                <div id="inial-part-new" class="hidden flex h-5/6 flex-col items-center justify-center text-[#0d0d0d]">
+                    <img width="48" height="48" src="./images/chatgpt-shape.svg" alt="ChatGPT">
+                    <div class="mx-3 mt-12 flex max-w-3xl flex-wrap items-stretch justify-center gap-4">
+                        <div class="flex max-w-3xl flex-wrap items-stretch justify-center gap-4">
+                            <button class="relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
+                            <img width="18" height="18" src="./images/aeroplane.svg" alt="Aeroplane">
+                            <div class="line-clamp-3 text-balance text-gray-600 dark:text-gray-500 break-word">Plan a relaxing day</div>
+                            </button>
+                            <button class="relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
+                            <img width="18" height="18" src="./images/script.svg" alt="script">
+                            <div class="line-clamp-3 text-balance text-gray-600 dark:text-gray-500 break-word">Python script for daily email reports</div>
+                            </button>
+                        </div>
+                        <div class="flex max-w-3xl flex-wrap items-stretch justify-center gap-4">
+                            <button class="relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
+                            <img width="18" height="18" src="./images/bulb.svg" alt="Bulb">
+                            <div class="line-clamp-3 text-balance text-gray-600 dark:text-gray-500 break-word">Recipe with what's in my kitchen</div>
+                            </button>
+                            <button class="relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
+                            <img width="18" height="18" src="./images/bag.svg" alt="Bag">
+                            <div class="line-clamp-3 text-balance text-gray-600 dark:text-gray-500 break-word">Pick outfit to look good on camera</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Intial Part -->
+
+                <div id="chat-body">
+                    <!-- Chat Part -->
+                    <div class="w-full text-[#0d0d0d]" data-scroll-anchor="false">
+                        <div class="py-2 md:py-[18px] px-3 text-base m-auto md:px-5 lg:px-1 xl:px-5">
+                            <div class="mx-auto flex flex-1 gap-3 text-base md:gap-4 md:md:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+                                <div class="group/conversation-turn relative flex w-full min-w-0 flex-col">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                        <div class="flex flex-grow flex-col max-w-full">
+                                            <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&]:mt-5 md:w-full md:items-end overflow-x-auto gap-2" data-message-author-role="user" data-message-id="aaa">
+                                                <div class="flex w-full flex-col gap-1 md:empty:hidden items-end rtl:items-start">
+                                                    <div class="relative max-w-[70%] rounded-3xl bg-[#f4f4f4] px-5 py-2.5 dark:bg-token-main-surface-secondary">Let's start improving my geography skills by quizzing me on world capitals. You can start by asking me the capital of a country of your choice, and I'll do my best to answer correctly.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full text-[#0d0d0d]" data-scroll-anchor="true">
+                        <div class="py-2 juice:py-[18px] px-3 text-base m-auto md:px-5 lg:px-1 xl:px-5">
+                            <div class="mx-auto flex flex-1 gap-3 text-base juice:gap-4 md:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+                                <div class="flex-shrink-0 flex flex-col relative items-end">
+                                    <div class="pt-0.5 juice:pt-0">
+                                        <div class="gizmo-bot-avatar flex h-6 w-6 items-center justify-center overflow-hidden rounded-full md:h-8 md:w-8">
+                                            <div class="relative p-1 rounded-sm flex items-center justify-center bg-white text-[#0d0d0d] h-8 w-8">
+                                                <img width="18" height="18" src="./images/chatgpt-shape.svg" alt="Shape">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                        <div class="flex flex-grow flex-col max-w-full">
+                                            <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&]:mt-5 juice:w-full juice:items-end overflow-x-auto gap-2" data-message-author-role="assistant">
+                                                <div class="flex w-full flex-col gap-1 juice:empty:hidden juice:first:pt-[3px]">
+                                                    <div class="markdown prose w-full break-words dark:prose-invert light"><p>Sure!</p><p>Nostalgia is like remembering a happy time from the past. Imagine you have a favorite toy or a fun day at the park, and when you think about it, it makes you feel warm and happy inside. That's what nostalgia feels like—it's thinking about good memories that make you smile.</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 flex gap-3 empty:hidden md:-ml-3">
+                                            <div class="items-center justify-start rounded-xl p-1 flex">
+                                                <div class="flex items-center">
+                                                    <button data-tooltip-target="tooltip-read" class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/sound.svg" alt="Sound">
+                                                        </span>
+                                                        <div id="tooltip-read" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Read Aloud
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-tooltip-target="tooltip-copy"  class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/copy.svg" alt="Copy">
+                                                        </span>
+                                                        <div id="tooltip-copy" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Copy
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-tooltip-target="tooltip-regenerate"  class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/refresh.svg" alt="Refresh">
+                                                        </span>
+                                                        <div id="tooltip-regenerate" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Regenerate
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-tooltip-target="tooltip-bad-response"  class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/dislike.svg" alt="Dislike">
+                                                        </span>
+                                                        <div id="tooltip-bad-response" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Bad response
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full text-[#0d0d0d]" data-scroll-anchor="false">
+                        <div class="py-2 md:py-[18px] px-3 text-base m-auto md:px-5 lg:px-1 xl:px-5">
+                            <div class="mx-auto flex flex-1 gap-3 text-base md:gap-4 md:md:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+                                <div class="group/conversation-turn relative flex w-full min-w-0 flex-col">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                        <div class="flex flex-grow flex-col max-w-full">
+                                            <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&]:mt-5 md:w-full md:items-end overflow-x-auto gap-2" data-message-author-role="user" data-message-id="aaa">
+                                                <div class="flex w-full flex-col gap-1 md:empty:hidden items-end rtl:items-start">
+                                                    <div class="relative max-w-[70%] rounded-3xl bg-[#f4f4f4] px-5 py-2.5 dark:bg-token-main-surface-secondary">More details</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full text-[#0d0d0d]" data-scroll-anchor="true">
+                        <div class="py-2 juice:py-[18px] px-3 text-base m-auto md:px-5 lg:px-1 xl:px-5">
+                            <div class="mx-auto flex flex-1 gap-3 text-base juice:gap-4 md:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+                                <div class="flex-shrink-0 flex flex-col relative items-end">
+                                    <div class="pt-0.5 juice:pt-0">
+                                        <div class="gizmo-bot-avatar flex h-6 w-6 items-center justify-center overflow-hidden rounded-full md:h-8 md:w-8">
+                                            <div class="relative p-1 rounded-sm flex items-center justify-center bg-white text-[#0d0d0d] h-8 w-8">
+                                                <img width="18" height="18" src="./images/chatgpt-shape.svg" alt="Shape">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                        <div class="flex flex-grow flex-col max-w-full">
+                                            <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&]:mt-5 juice:w-full juice:items-end overflow-x-auto gap-2" data-message-author-role="assistant">
+                                                <div class="flex w-full flex-col gap-1 juice:empty:hidden juice:first:pt-[3px]">
+                                                    <div class="markdown prose w-full break-words dark:prose-invert light"><p>Of course! Let's imagine you have a favorite teddy bear. If you ever move to a new house or grow older and stop playing with it, sometimes you might think about that teddy bear and all the fun times you had with it. When you think about those times, you might feel a little bit happy and a little bit sad at the same time. That feeling is nostalgia.</p><p>It’s like looking at old pictures of a trip to the zoo with your family. You remember how much fun you had, and it makes you smile. But it also makes you miss those moments a bit because they are over now. Nostalgia is all about remembering those happy, special times and feeling good about them, even if they happened a long time ago.</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 flex gap-3 empty:hidden md:-ml-3">
+                                            <div class="items-center justify-start rounded-xl p-1 flex">
+                                                <div class="flex items-center">
+                                                    <button data-tooltip-target="tooltip-read-1" class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/sound.svg" alt="Sound">
+                                                        </span>
+                                                        <div id="tooltip-read-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Read Aloud
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-tooltip-target="tooltip-copy-1"  class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/copy.svg" alt="Copy">
+                                                        </span>
+                                                        <div id="tooltip-copy-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Copy
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-tooltip-target="tooltip-regenerate-1"  class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/refresh.svg" alt="Refresh">
+                                                        </span>
+                                                        <div id="tooltip-regenerate-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Regenerate
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-tooltip-target="tooltip-bad-response-1" class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/dislike.svg" alt="Dislike">
+                                                        </span>
+                                                        <div id="tooltip-bad-response-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Bad response
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Chat Part -->
+                </div>
+                   
+            </div>
+          </div>
+          <div class="w-full md:pt-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:w-[calc(100%-.5rem)]">
+            <div class="px-3 text-base md:px-4 m-auto lg:px-1 xl:px-5">
+              <div class="mx-auto flex flex-1 gap-3 text-base md:gap-4 md:md:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+                <form action="" class="w-full">
+                  <div class="relative flex h-full max-w-full flex-1 flex-col">
+                    <div class="absolute bottom-full left-0 right-0 z-20"><div class="relative h-full w-full"><div class="flex flex-col gap-3.5 pb-3.5 pt-2"></div></div></div>
+                    <div class="flex w-full items-center">
+                      <div class="flex w-full flex-col gap-1.5 rounded-[26px] p-1.5 transition-colors bg-[#f4f4f4]">
+                        <div class="flex items-center gap-1.5 md:gap-3.5">
+                          <div>
+                            <div class="flex flex-col">
+                              <input multiple="" type="file" tabindex="-1" class="hidden" style="display: none;" />
+                              <button
+                                  type="button"
+                                  id="radix-:ra:"
+                                  aria-haspopup="menu"
+                                  aria-expanded="false"
+                                  data-state="closed"
+                                  class="text-[#0d0d0d] border border-transparent inline-flex items-center justify-center gap-1 rounded-lg text-sm dark:transparent dark:bg-transparent leading-none outline-none cursor-pointer hover:bg-[#f9f9f9] dark:hover:bg-[#f9f9f9] focus-visible:bg-[#f9f9f9] radix-state-active:text-token-text-secondary radix-disabled:cursor-auto radix-disabled:bg-transparent radix-disabled:text-token-text-tertiary dark:radix-disabled:bg-transparent m-0 h-0 w-0 border-none bg-transparent p-0"
+                              ></button>
+                              <button
+                                  class="flex items-center justify-center text-[#0d0d0d] md:h-8 md:w-8 dark:text-white md:rounded-full focus-visible:outline-black dark:focus-visible:outline-white md:mb-1 md:ml-[3px]"
+                                  aria-disabled="false"
+                              >
+                                  <img width="24" height="24" src="./images/pin.svg" alt="Pin">
+                              </button>
+                              <div type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:rc:" data-state="closed"></div>
+                            </div>
+                          </div>
+                          <div class="flex min-w-0 flex-1 flex-col"><textarea id="prompt-textarea" tabindex="0" data-id="root" dir="auto" rows="1" placeholder="Message ChatGPT" class="m-0 resize-none border-0 bg-transparent px-0 text-[#0d0d0d] focus:ring-0 focus-visible:ring-0 max-h-[25dvh]" style="height: 40px; overflow-y: hidden;"></textarea></div>
+                          <button disabled="" data-testid="fruitmd-send-button" class="mb-1 me-1 flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors hover:opacity-70 focus-visible:outline-none focus-visible:outline-black disabled:bg-[#D7D7D7] disabled:text-[#f4f4f4] disabled:hover:opacity-100 dark:bg-white dark:text-black dark:focus-visible:outline-white disabled:dark:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary"><img width="32" height="32" src="./images/top-arrow.svg" alt=""></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="relative px-2 py-2 text-center text-xs text-token-text-secondary md:px-[60px]"><span>ChatGPT can make mistakes. Check important info.</span></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
