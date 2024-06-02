@@ -20,7 +20,7 @@
 </head>
 <body>
   <div class="relative z-0 flex h-full w-full overflow-hidden">
-    <aside class="flex-shrink-0 overflow-x-hidden bg-[#f9f9f9]" style="width: 260px; visibility: visible;">
+    <aside class="fixed top-0 left-0 h-full z-20 md:static flex-shrink-0 overflow-x-hidden bg-[#f9f9f9] w-0 lg:w-[260px] visible">
       <div class="h-full w-[260px]">
           <div class="flex h-full min-h-0 flex-col">
               <div class="relative h-full w-full flex-1 items-start border-white/20">
@@ -38,14 +38,14 @@
                                 <img width="24" height="24" class="add-new-chat" src="./images/new-chat.svg" alt="New Chat">
                             </button>
                             <div id="tooltip-new-chat" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                            New Chat
-                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                New Chat
+                                <div class="tooltip-arrow" data-popper-arrow></div>
                             </div>
                       </div>
                       <div class="-mr-2 flex-1 flex-col overflow-y-scroll overflow-x-hidden pr-2 transition-opacity duration-500">
                           <div class="sticky left-0 right-0 top-0 z-20 bg-[#f9f9f9] pt-3.5 md:static md:pt-0">
                               <div class="pb-0.5 md:pb-0" tabindex="0">
-                                  <a href="/" class="group flex h-10 items-center gap-2 rounded-lg bg-[#f9f9f9] px-2 font-semibold hover:bg-[#ececec] md:gap-2.5 md:font-normal">
+                                  <a href="#" class="group flex h-10 items-center gap-2 rounded-lg bg-[#f9f9f9] px-2 font-semibold hover:bg-[#ececec] md:gap-2.5 md:font-normal">
                                       <div class="h-6 w-6 flex-shrink-0">
                                           <div class="relative flex h-full items-center justify-center rounded-full bg-white text-[#0d0d0d]">
                                               <img width="41" height="41" class="h-2/3 w-2/3" src="./images/chatgpt-shape.svg" alt="Shape" />
@@ -89,7 +89,7 @@
                                                 <a href="/da775" class="flex items-center gap-2 p-2">
                                                     <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
                                                         Animate SVG
-                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary w-8 from-0% group-hover:w-20 md:group-hover:from-60% md:group-hover:w-10"></div>
                                                     </div>
                                                 </a>
                                                     <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
@@ -150,7 +150,7 @@
                                                 <a href="/da775" class="flex items-center gap-2 p-2">
                                                     <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
                                                         Animate SVG with javascript on scroll
-                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% md:group-hover:w-10"></div>
                                                     </div>
                                                 </a>
                                                 <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
@@ -189,7 +189,7 @@
                                                 <a href="/da775" class="flex items-center gap-2 p-2">
                                                     <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
                                                         Animate SVG with javascript on scroll
-                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% md:group-hover:w-10"></div>
                                                     </div>
                                                 </a>
                                                 <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
@@ -228,7 +228,7 @@
                                                 <a href="/da775" class="flex items-center gap-2 p-2">
                                                     <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
                                                         Animate SVG with javascript on scroll
-                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% md:group-hover:w-10"></div>
                                                     </div>
                                                 </a>
                                                 <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
@@ -267,7 +267,7 @@
                                                 <a href="/da775" class="flex items-center gap-2 p-2">
                                                     <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
                                                         Animate SVG with javascript on scroll
-                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% md:group-hover:w-10"></div>
                                                     </div>
                                                 </a>
                                                 <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
@@ -295,7 +295,7 @@
                                                 <a href="/da775" class="flex items-center gap-2 p-2">
                                                     <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
                                                         Animate SVG with javascript on scroll
-                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% md:group-hover:w-10"></div>
                                                     </div>
                                                 </a>
                                                 <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
@@ -323,7 +323,7 @@
                                                 <a href="/da775" class="flex items-center gap-2 p-2">
                                                     <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
                                                         Animate SVG with javascript on scroll
-                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% md:group-hover:w-10"></div>
                                                     </div>
                                                 </a>
                                                 <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
@@ -351,7 +351,7 @@
                                                 <a href="/da775" class="flex items-center gap-2 p-2">
                                                     <div class="relative grow overflow-hidden whitespace-nowrap" dir="auto">
                                                         Animate SVG with javascript on scroll
-                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% juice:group-hover:w-10"></div>
+                                                        <div class="absolute bottom-0 top-0 to-transparent right-0 bg-gradient-to-l rtl:left-0 rtl:bg-gradient-to-r from-token-sidebar-surface-primary from-token-sidebar-surface-primary group-hover:from-token-sidebar-surface-secondary  w-8 from-0% group-hover:w-20 group-hover:from-60% md:group-hover:w-10"></div>
                                                     </div>
                                                 </a>
                                                 <div class="absolute bottom-0 right-0 top-0 hidden items-center gap-1.5 pr-2 group-hover:flex">
@@ -393,15 +393,15 @@
           </div>
       </div>
     </aside>
-    <div class="relative flex h-full max-w-full flex-1 flex-col overflow-hidden">
+    <div class="relative flex h-full max-w-full flex-1 flex-col overflow-hidden md:pr-2">
       <main class="relative h-full w-full flex-1 overflow-auto transition-width">
         <div class="flex h-full flex-col focus-visible:outline-0" role="presentation" tabindex="0">
           <div class="flex-1 overflow-hidden">
-            <div class="relative h-full overflow-y-scroll">
+            <div class="relative h-full overflow-y-scroll pb-9">
                 <div class="sticky top-0 md:p-3 mb-1.5 flex items-center justify-between z-10 h-14 p-2 font-semibold bg-white">
                     <div class="absolute start-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2"></div>
                     <div class="flex items-center gap-2 overflow-hidden md:gap-0">
-                        <div id="show-toggle" class="hidden">
+                        <div id="show-toggle" class=" lg:hidden">
                             <button data-tooltip-target="open-sidebar" id="show-toggle-btn" class="h-10 rounded-lg px-2 text-[#7d7d7d] hover:bg-[#ececec] focus-visible:bg-[#ececec] focus-visible:outline-0">
                                 <img width="24" height="" src="./images/collapes.svg" alt="Collapes">
                             </button>
@@ -423,49 +423,53 @@
                           data-dropdown-toggle="dropdown1" data-dropdown-trigger="click"
                           class="group flex cursor-pointer items-center gap-1 rounded-xl py-2 px-3 text-lg font-semibold hover:bg-[#f9f9f9] md:text-[#7d7d7d] md:rounded-lg md:py-1.5 overflow-hidden whitespace-nowrap"
                       >
-                          <div class="md:text-[#7d7d7d]">ChatGPT <span class="text-[#7d7d7d]"></span></div>
-                          <img width="18" height="18" src="./images/down-arrow.svg" alt="Arrow">
+                            <div class="md:text-[#7d7d7d]">ChatGPT <span class="text-[#7d7d7d]"></span></div>
+                            <img width="18" height="18" src="./images/down-arrow.svg" alt="Arrow">
 
-                          <!-- Dropdown menu -->
-                          <div id="dropdown1" class="z-30 text-[#0d0d0d] min-w-36 py-2 hidden border border-black/[0.1] bg-white divide-y divide-gray-100 rounded-lg shadow-lg dark:bg-gray-700">
-                            <div class="flex items-center m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 gap-2.5 py-3 !pr-3">
-                                <div class="flex grow items-center justify-between gap-2">
-                                    <div class="flex items-center gap-3">
-                                        <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#ececec]">
-                                            <img width="16" height="16" src="./images/star.svg" alt="Start">
-                                        </span>
-                                        <div class="font-normal">ChatGPT Plus<div class="text-[#b4b4b4] font-normal md:text-xs">Our smartest model &amp; more</div></div>
+                            <!-- Dropdown menu -->
+                            <div id="dropdown1" class="z-30 text-[#0d0d0d] min-w-60 md:min-w-[340px] py-2 hidden border border-black/[0.1] bg-white rounded-lg shadow-lg dark:bg-gray-700">
+                                <div class="flex items-center justify-between pb-0 pl-5 pr-4 pt-4 md:mb-1 md:px-5 md:pt-2">
+                                    <span class="text-sm text-[#b4b4b4]">Model</span>
+                                    <a href="#"><img width="20" height="20" src="./images/info-i.svg" alt="Info"></a>
+                                </div>
+                                <div class="flex items-center m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 gap-2.5 py-3 !pr-3">
+                                    <div class="flex grow items-center justify-between gap-2">
+                                        <div class="flex items-center gap-3">
+                                            <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#ececec]">
+                                                <img width="16" height="16" src="./images/star.svg" alt="Start">
+                                            </span>
+                                            <div class="font-normal">ChatGPT Plus<div class="text-[#b4b4b4] font-normal md:text-xs">Our smartest model &amp; more</div></div>
+                                        </div>
+                                        <button class="btn relative btn-secondary btn-small">
+                                            <div class="flex w-full gap-2 items-center justify-center">Upgrade</div>
+                                        </button>
                                     </div>
-                                    <button class="btn relative btn-secondary btn-small">
-                                        <div class="flex w-full gap-2 items-center justify-center">Upgrade</div>
-                                    </button>
                                 </div>
-                            </div>
-                            <div class="flex items-center m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 gap-2.5 py-3 !pr-3">
-                                <div class="flex grow items-center justify-between gap-2">
-                                    <div class="flex items-center gap-3">
-                                        <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#ececec]">
-                                            <img width="16" height="16" src="./images/tasks.svg" alt="Tasks">
-                                        </span>
-                                        <div class="font-normal">ChatGPT<div class="text-[#b4b4b4] font-normal md:text-xs">Great for everyday tasks</div></div>
+                                <div class="flex items-center m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 gap-2.5 py-3 !pr-3">
+                                    <div class="flex grow items-center justify-between gap-2">
+                                        <div class="flex items-center gap-3">
+                                            <span class="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#ececec]">
+                                                <img width="16" height="16" src="./images/tasks.svg" alt="Tasks">
+                                            </span>
+                                            <div class="font-normal">ChatGPT<div class="text-[#b4b4b4] font-normal md:text-xs">Great for everyday tasks</div></div>
+                                        </div>
+                                        <img width="18" height="18" src="./images/tick-mark.svg" alt="Tick">
                                     </div>
-                                    <img width="18" height="18" src="./images/tick-mark.svg" alt="Tick">
+                                </div>
+                                <div role="separator" aria-orientation="horizontal" class="my-1.5 h-[1px] bg-black/[0.1] md:mx-5 md:my-1"></div>
+                                <div class="flex items-center m-1.5 p-2.5 text-sm font-normal cursor-pointer focus-visible:outline-0 disabled:pointer-events-none group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 gap-2.5 py-3 !pr-3">
+                                    <div class="flex items-center justify-center text-token-text-secondary h-5 w-7">
+                                        <img width="20" height="20" src="./images/temporary-chat.svg" alt="Temporary Chat">
+                                    </div>
+                                    <div class="flex grow items-center justify-between gap-2">
+                                        <div class="flex flex-1 items-center gap-3">Temporary chat</div>
+                                        <label class="inline-flex items-center cursor-pointer">
+                                            <input type="checkbox" value="" class="sr-only peer">
+                                            <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#10a37f]"></div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div role="separator" aria-orientation="horizontal" class="my-1.5 h-[1px] bg-token-border-light juice:mx-5 juice:my-1"></div>
-                            <div class="flex items-center m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 gap-2.5 py-3 !pr-3">
-                                <div class="flex items-center justify-center text-token-text-secondary h-5 w-7">
-                                    <img width="20" height="20" src="./images/temporary-chat.svg" alt="Temporary Chat">
-                                </div>
-                                <div class="flex grow items-center justify-between gap-2">
-                                    <div class="flex flex-1 items-center gap-3">Temporary chat</div>
-                                    <label class="inline-flex items-center cursor-pointer">
-                                        <input type="checkbox" value="" class="sr-only peer">
-                                        <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#10a37f]"></div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
                       </div>
                     </div>
                     <div class="flex gap-2 pr-1">
@@ -482,16 +486,50 @@
                             data-state="closed"
                         >
                             <div class="flex items-center justify-center overflow-hidden rounded-full">
-                              <div class="relative flex">
-                                <img
-                                    alt="User"
-                                    loading="lazy"
-                                    width="32"
-                                    height="32"
-                                    class="rounded-sm"
-                                    src="https://lh3.googleusercontent.com/a/ACg8ocIdhtJNJGpdyJ3iyKi-udrC45YMiBPbDt4E6G6oKonA=s96-c"
-                                />
-                              </div>
+                                <div class="relative flex" data-dropdown-toggle="user-menu" data-dropdown-trigger="click">
+                                    <img
+                                        alt="User"
+                                        loading="lazy"
+                                        width="32"
+                                        height="32"
+                                        class="rounded-sm"
+                                        src="https://lh3.googleusercontent.com/a/ACg8ocIdhtJNJGpdyJ3iyKi-udrC45YMiBPbDt4E6G6oKonA=s96-c"
+                                    />
+                                </div>
+                                <!-- Dropdown menu -->
+                                <div id="user-menu" class="z-30 mr-3 text-black min-w-56 md:min-w-72 py-2 hidden border border-black/[0.1] bg-white rounded-lg shadow-lg">
+                                    <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                        <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                            <img src="./images/badge.svg" alt="My Plan">
+                                        </div>
+                                        My Plan
+                                    </div>
+                                    <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                        <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                            <img src="./images/profile.svg" alt="Profile">
+                                        </div>
+                                        My GPTs
+                                    </div>
+                                    <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                        <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                            <img src="./images/customize.svg" alt="Customize">
+                                        </div>
+                                        Customize ChatGPT
+                                    </div>
+                                    <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                        <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                            <img src="./images/settings.svg" alt="Settings">
+                                        </div>
+                                        Settings
+                                    </div>
+                                    <div role="separator" aria-orientation="horizontal" class="my-1.5 h-[1px] bg-black/[0.1] juice:mx-5 juice:my-1"></div>
+                                    <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                        <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                            <img src="./images/logout.svg" alt="Log out">
+                                        </div>
+                                        Log out
+                                    </div>
+                                </div>
                             </div>
                         </button>
                     </div>
@@ -500,23 +538,23 @@
                 <!-- Intial Part -->
                 <div id="inial-part-new" class="hidden flex h-5/6 flex-col items-center justify-center text-[#0d0d0d]">
                     <img width="48" height="48" src="./images/chatgpt-shape.svg" alt="ChatGPT">
-                    <div class="mx-3 mt-12 flex max-w-3xl flex-wrap items-stretch justify-center gap-4">
-                        <div class="flex max-w-3xl flex-wrap items-stretch justify-center gap-4">
-                            <button class="relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
+                    <div class="mx-3 mt-12 flex max-w-3xl flex-wrap items-stretch justify-center gap-2 md:gap-4">
+                        <div class="flex max-w-3xl flex-wrap items-stretch justify-center gap-2 md:gap-4">
+                            <button class="relative flex w-36 md:w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
                             <img width="18" height="18" src="./images/aeroplane.svg" alt="Aeroplane">
                             <div class="line-clamp-3 text-balance text-gray-600 dark:text-gray-500 break-word">Plan a relaxing day</div>
                             </button>
-                            <button class="relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
+                            <button class="relative flex w-36 md:w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
                             <img width="18" height="18" src="./images/script.svg" alt="script">
                             <div class="line-clamp-3 text-balance text-gray-600 dark:text-gray-500 break-word">Python script for daily email reports</div>
                             </button>
                         </div>
-                        <div class="flex max-w-3xl flex-wrap items-stretch justify-center gap-4">
-                            <button class="relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
+                        <div class="flex max-w-3xl flex-wrap items-stretch justify-center gap-2 md:gap-4">
+                            <button class="relative flex w-36 md:w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
                             <img width="18" height="18" src="./images/bulb.svg" alt="Bulb">
                             <div class="line-clamp-3 text-balance text-gray-600 dark:text-gray-500 break-word">Recipe with what's in my kitchen</div>
                             </button>
-                            <button class="relative flex w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
+                            <button class="relative flex w-36 md:w-40 flex-col gap-2 rounded-2xl border border-token-border-light px-3 pb-4 pt-3 text-start align-top text-[15px] shadow-[0_0_2px_0_rgba(0,0,0,0.05),0_4px_6px_0_rgba(0,0,0,0.02)] transition hover:bg-[#f9f9f9]">
                             <img width="18" height="18" src="./images/bag.svg" alt="Bag">
                             <div class="line-clamp-3 text-balance text-gray-600 dark:text-gray-500 break-word">Pick outfit to look good on camera</div>
                             </button>
@@ -535,7 +573,13 @@
                                         <div class="flex flex-grow flex-col max-w-full">
                                             <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&]:mt-5 md:w-full md:items-end overflow-x-auto gap-2" data-message-author-role="user" data-message-id="aaa">
                                                 <div class="flex w-full flex-col gap-1 md:empty:hidden items-end rtl:items-start">
-                                                    <div class="relative max-w-[70%] rounded-3xl bg-[#f4f4f4] px-5 py-2.5 dark:bg-token-main-surface-secondary">Let's start improving my geography skills by quizzing me on world capitals. You can start by asking me the capital of a country of your choice, and I'll do my best to answer correctly.</div>
+                                                    <div class="relative max-w-[70%] rounded-3xl bg-[#f4f4f4] px-5 py-2.5 dark:bg-token-main-surface-secondary whitespace-normal">Let's start improving my geography skills by quizzing me on world capitals. You can start by asking me the capital of a country of your choice, and I'll do my best to answer correctly.
+                                                        <div class="absolute bottom-0 right-full top-0 -mr-3.5 hidden pr-5 pt-1 group-hover/conversation-turn:block">
+                                                            <button class="flex h-9 w-9 items-center justify-center rounded-full transition hover:bg-[#ececec]">
+                                                                <img width="18" height="18" src="./images/pencil.svg" alt="Edit">
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -620,7 +664,14 @@
                                         <div class="flex flex-grow flex-col max-w-full">
                                             <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&]:mt-5 md:w-full md:items-end overflow-x-auto gap-2" data-message-author-role="user" data-message-id="aaa">
                                                 <div class="flex w-full flex-col gap-1 md:empty:hidden items-end rtl:items-start">
-                                                    <div class="relative max-w-[70%] rounded-3xl bg-[#f4f4f4] px-5 py-2.5 dark:bg-token-main-surface-secondary">More details</div>
+                                                    <div class="relative max-w-[70%] rounded-3xl bg-[#f4f4f4] px-5 py-2.5 dark:bg-token-main-surface-secondary whitespace-normal">
+                                                        More details
+                                                        <div class="absolute bottom-0 right-full top-0 -mr-3.5 hidden pr-5 pt-1 group-hover/conversation-turn:block">
+                                                            <button class="flex h-9 w-9 items-center justify-center rounded-full transition hover:bg-[#ececec]">
+                                                                <img width="18" height="18" src="./images/pencil.svg" alt="Edit">
+                                                            </button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -689,12 +740,350 @@
                                                             <div class="tooltip-arrow" data-popper-arrow></div>
                                                         </div>
                                                     </button>
+                                                    <button data-dropdown-toggle="change-modal" data-dropdown-trigger="click" data-tooltip-target="tooltip-change-modal" class="rounded-lg text-token-text-secondary px-1 hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="16" height="16" src="./images/spark.svg" alt="Spark">
+                                                            <span class="line-clamp-1 text-sm" style="opacity: 0; padding-left: 0px; width: 0px;">4o</span>
+                                                            <img width="16" height="16" src="./images/down-arrow.svg" alt="">
+                                                        </span>
+                                                        <div id="tooltip-change-modal" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Change modal
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <div id="change-modal" class="z-30 mr-3 text-[#0d0d0d] min-w-56 md:min-w-72 py-2 hidden border border-black/[0.1] bg-white rounded-lg shadow-lg">
+                                                        <div role="menuitem" class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                                            <div class="flex w-full items-center justify-between">
+                                                                <div class="flex items-center gap-2 md:gap-3">
+                                                                    <div class="flex items-center justify-center md:h-7 md:w-7 md:rounded-full md:bg-[#ececec]">
+                                                                        <div class="h-4 w-4">
+                                                                            <img width="16" height="16" src="./images/star.svg" alt="Star">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div><div>GPT-4o</div><div class="text-sm text-[#b4b4b4]">Smart and fast</div></div>
+                                                                </div>
+                                                                <img class="group-hover:hidden" width="18" height="18" src="./images/check-mark.svg" alt="Tick">
+                                                                <img class="hidden group-hover:block" width="18" height="18" src="./images/refresh.svg" alt="Refresh">
+                                                            </div>
+                                                        </div>
+                                                        <div role="menuitem" class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                                            <div class="flex w-full items-center justify-between">
+                                                                <div class="flex items-center gap-2 md:gap-3">
+                                                                    <div class="flex items-center justify-center md:h-7 md:w-7 md:rounded-full md:bg-[#ececec]">
+                                                                        <div class="h-4 w-4">
+                                                                            <img width="16" height="16" src="./images/fast.svg" alt="Smart">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div><div>GPT-4</div><div class="text-sm text-[#b4b4b4]">Smart</div></div>
+                                                                </div>
+                                                                <img class="hidden group-hover:block" width="18" height="18" src="./images/refresh.svg" alt="Refresh">
+                                                            </div>
+                                                        </div>
+                                                        <div role="menuitem" class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 pointer-events-none opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="0" aria-disabled="true">
+                                                            <div class="flex w-full items-center justify-between">
+                                                                <div class="flex items-center gap-2 md:gap-3">
+                                                                    <div class="flex items-center justify-center md:h-7 md:w-7 md:rounded-full md:bg-[#ececec]">
+                                                                        <div class="h-4 w-4">
+                                                                            <img width="16" height="16" src="./images/fast.svg" alt="Fastest">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div><div>GPT-3.5</div><div class="text-sm text-[#b4b4b4]">Fastest</div></div>
+                                                                </div>
+                                                                <img width="18" height="18" src="./images/info-i.svg" alt="Info">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="w-full text-[#0d0d0d]" data-scroll-anchor="false">
+                        <div class="py-2 md:py-[18px] px-3 text-base m-auto md:px-5 lg:px-1 xl:px-5">
+                            <div class="mx-auto flex flex-1 gap-3 text-base md:gap-4 md:md:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+                                <div class="group/conversation-turn relative flex w-full min-w-0 flex-col">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                        <div class="flex flex-grow flex-col max-w-full">
+                                            <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&]:mt-5 md:w-full md:items-end overflow-x-auto gap-2" data-message-author-role="user" data-message-id="aaa">
+                                                <div class="flex w-full flex-col gap-1 md:empty:hidden items-end rtl:items-start">
+                                                    <div class="relative max-w-[70%] rounded-3xl bg-[#f4f4f4] px-5 py-2.5 dark:bg-token-main-surface-secondary whitespace-normal">
+                                                        More Images
+                                                        <div class="absolute bottom-0 right-full top-0 -mr-3.5 hidden pr-5 pt-1 group-hover/conversation-turn:block">
+                                                            <button class="flex h-9 w-9 items-center justify-center rounded-full transition hover:bg-[#ececec]">
+                                                                <img width="18" height="18" src="./images/pencil.svg" alt="Edit">
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-1 flex gap-3 empty:hidden md:mr-1 md:flex-row-reverse">
+                                            <div class="items-center justify-start rounded-xl p-1 flex">
+                                                <div class="flex items-center justify-center rounded-lg text-[#7d7d7d]">
+                                                    <button class="flex h-[30px] w-[30px] items-center justify-center rounded-md hover:bg-[#f9f9f9] disabled:opacity-50 disabled:hover:bg-transparent">
+                                                        <img width="18" height="18" src="./images/left-arrow.svg" alt="Arrow">
+                                                    </button>
+                                                    <div class="px-0.5 text-sm font-semibold tabular-nums">2/2</div>
+                                                    <button disabled class="flex h-[30px] w-[30px] items-center justify-center rounded-md hover:bg-[#f9f9f9] disabled:opacity-50 disabled:hover:bg-transparent">
+                                                        <img width="18" height="18" src="./images/right-arrow.svg" alt="Arrow">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full text-[#0d0d0d]" data-scroll-anchor="false">
+                        <div class="py-2 md:py-[18px] px-3 text-base m-auto md:px-5 lg:px-1 xl:px-5">
+                            <div class="mx-auto flex flex-1 gap-3 text-base md:gap-4 md:md:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+                                <div class="group/conversation-turn relative flex w-full min-w-0 flex-col">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                        <div class="flex flex-grow flex-col max-w-full">
+                                            <div class="rounded-3xl bg-[#ececec] px-3 py-2 md:py-3">
+                                                <textarea class="m-0 resize-none border-0 bg-transparent focus:ring-0 focus-visible:ring-0 w-full h-20 p-2">Japanese anime art, hype realistic, professional feel, nature background, visual and appealing style, web anime, Lord krishana, naughty boy, wearing yellow dhoti, jewellery, feeding birds in the style of professional artist, template background, in 1:1 </textarea>
+                                                <div class="flex justify-end gap-2">
+                                                    <button class="btn relative btn-secondary" as="button">Cancel</button>
+                                                    <button class="btn relative btn-primary" as="button">Send</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full text-[#0d0d0d]" data-scroll-anchor="true">
+                        <div class="py-2 md:py-[18px] px-3 text-base m-auto md:px-5 lg:px-1 xl:px-5">
+                            <div class="mx-auto flex flex-1 gap-3 text-base md:gap-4 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+                                <div class="flex-shrink-0 flex flex-col relative items-end">
+                                    <div class="pt-0.5 md:pt-0">
+                                        <div class="gizmo-bot-avatar flex h-6 w-6 items-center justify-center overflow-hidden rounded-full md:h-8 md:w-8">
+                                            <div class="relative p-1 rounded-sm flex items-center justify-center bg-white text-[#0d0d0d] h-8 w-8">
+                                                <img width="18" height="18" src="./images/chatgpt-shape.svg" alt="Shape">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                        <div class="flex flex-grow flex-col max-w-full">
+                                            <div class="grid gap-2 grid-cols-2 my-1 transition-opacity duration-300">
+                                                <div class="flex">
+                                                    <div class="relative group/dalle-image overflow-hidden aspect-square max-w-[400px] md:overflow-hidden rounded-2xl" role="button">
+                                                        <div class="pointer-events-none absolute inset-0 bg-[#f9f9f9]"></div>
+                                                        <div class="relative h-full">
+                                                            <img src="./images/image.webp" loading="lazy" alt="Image">
+                                                            <div class="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1)] rounded-2xl dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] group-hover/dalle-image:bg-black/20 md:group-hover/dalle-image:bg-transparent"></div>
+                                                            <div class="invisible absolute top-3 flex gap-1 group-hover/dalle-image:visible left-3">
+                                                                <button class="flex h-8 w-8 items-center justify-center rounded bg-black/50 hover:opacity-70"><img width="18" height="18" src="./images/like-white.svg" alt="Like"></button>
+                                                                <button class="flex h-8 w-8 items-center justify-center rounded bg-black/50 hover:opacity-70"><img width="18" height="18" src="./images/dislike-white.svg" alt="DisLike"></button>
+                                                            </div>
+                                                            <div class="invisible absolute top-3 flex gap-1 group-hover/dalle-image:visible right-3">
+                                                                <a role="button" href="./images/image.webp" download class="flex h-8 w-8 items-center justify-center rounded bg-black/50 hover:opacity-70"><img width="18" height="18" src="./images/download-white.svg" alt="Download"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="relative group/dalle-image overflow-hidden aspect-square max-w-[400px] md:overflow-hidden rounded-2xl" role="button">
+                                                        <div class="pointer-events-none absolute inset-0 bg-[#f9f9f9]"></div>
+                                                        <div class="relative h-full">
+                                                            <img src="./images/image.webp" loading="lazy" alt="Image">
+                                                            <div class="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1)] md:rounded-2xl dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] group-hover/dalle-image:bg-black/20 md:group-hover/dalle-image:bg-transparent"></div>
+                                                            <div class="invisible absolute top-3 flex gap-1 group-hover/dalle-image:visible left-3">
+                                                                <button class="flex h-8 w-8 items-center justify-center rounded bg-black/50 hover:opacity-70"><img width="18" height="18" src="./images/like-white.svg" alt="Like"></button>
+                                                                <button class="flex h-8 w-8 items-center justify-center rounded bg-black/50 hover:opacity-70"><img width="18" height="18" src="./images/dislike-white.svg" alt="DisLike"></button>
+                                                            </div>
+                                                            <div class="invisible absolute top-3 flex gap-1 group-hover/dalle-image:visible right-3">
+                                                               <a role="button" href="./images/image.webp" download class="flex h-8 w-8 items-center justify-center rounded bg-black/50 hover:opacity-70"><img width="18" height="18" src="./images/download-white.svg" alt="Download"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex">
+                                                    <div class="relative group/dalle-image overflow-hidden aspect-square max-w-[400px] md:overflow-hidden rounded-2xl" role="button">
+                                                        <div class="pointer-events-none absolute inset-0 bg-[#f9f9f9]"></div>
+                                                        <div class="relative h-full">
+                                                            <img src="./images/image.webp" loading="lazy" alt="Image">
+                                                            <div class="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.1)] md:rounded-2xl dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] group-hover/dalle-image:bg-black/20 md:group-hover/dalle-image:bg-transparent"></div>
+                                                            <div class="invisible absolute top-3 flex gap-1 group-hover/dalle-image:visible left-3">
+                                                                <button class="flex h-8 w-8 items-center justify-center rounded bg-black/50 hover:opacity-70"><img width="18" height="18" src="./images/like-white.svg" alt="Like"></button>
+                                                                <button class="flex h-8 w-8 items-center justify-center rounded bg-black/50 hover:opacity-70"><img width="18" height="18" src="./images/dislike-white.svg" alt="DisLike"></button>
+                                                            </div>
+                                                            <div class="invisible absolute top-3 flex gap-1 group-hover/dalle-image:visible right-3">
+                                                               <a role="button" href="./images/image.webp" download class="flex h-8 w-8 items-center justify-center rounded bg-black/50 hover:opacity-70"><img width="18" height="18" src="./images/download-white.svg" alt="Download"></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&]:mt-5 md:w-full md:items-end overflow-x-auto gap-2" data-message-author-role="assistant">
+                                                <div class="flex w-full flex-col gap-1 md:empty:hidden md:first:pt-[3px]">
+                                                    <p>Here is the hyper-realistic, professional Japanese anime style image of Lord Krishna as a naughty boy, feeding birds in a beautiful nature background. If you need any adjustments or additional details, feel free to let me know!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full text-[#0d0d0d]" data-scroll-anchor="true">
+                        <div class="py-2 juice:py-[18px] px-3 text-base m-auto md:px-5 lg:px-1 xl:px-5">
+                            <div class="mx-auto flex flex-1 gap-3 text-base juice:gap-4 md:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+                                <div class="flex-shrink-0 flex flex-col relative items-end">
+                                    <div class="pt-0.5 juice:pt-0">
+                                        <div class="gizmo-bot-avatar flex h-6 w-6 items-center justify-center overflow-hidden rounded-full md:h-8 md:w-8">
+                                            <div class="relative p-1 rounded-sm flex items-center justify-center bg-white text-[#0d0d0d] h-8 w-8">
+                                                <img width="18" height="18" src="./images/chatgpt-shape.svg" alt="Shape">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn">
+                                    <div class="flex-col gap-1 md:gap-3">
+                                        <div class="flex flex-grow flex-col max-w-full">
+                                            <div class="min-h-[20px] text-message flex flex-col items-start whitespace-pre-wrap break-words [.text-message+&]:mt-5 juice:w-full juice:items-end overflow-x-auto gap-2" data-message-author-role="assistant">
+                                                <div class="flex w-full flex-col gap-1 juice:empty:hidden juice:first:pt-[3px]">
+                                                    <div class="markdown prose w-full break-words dark:prose-invert light"><p>It seems like you might have intended to write something else. Is there anything specific you'd like to discuss or ask about?</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3 md:mt-1 flex flex-col md:flex-row gap-3 empty:hidden md:-ml-3">
+                                            <div class="items-center justify-start rounded-xl md:p-1 flex">
+                                                <div class="flex items-center justify-center rounded-lg text-[#7d7d7d]">
+                                                    <button class="flex h-[30px] w-[30px] items-center justify-center rounded-md hover:bg-[#f9f9f9] disabled:opacity-50 disabled:hover:bg-transparent">
+                                                        <img width="18" height="18" src="./images/left-arrow.svg" alt="Arrow">
+                                                    </button>
+                                                    <div class="px-0.5 text-sm font-semibold tabular-nums">2/2</div>
+                                                    <button disabled class="flex h-[30px] w-[30px] items-center justify-center rounded-md hover:bg-[#f9f9f9] disabled:opacity-50 disabled:hover:bg-transparent">
+                                                        <img width="18" height="18" src="./images/right-arrow.svg" alt="Arrow">
+                                                    </button>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <button data-tooltip-target="tooltip-read-1" class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/sound.svg" alt="Sound">
+                                                        </span>
+                                                        <div id="tooltip-read-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Read Aloud
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-tooltip-target="tooltip-copy-1"  class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/copy.svg" alt="Copy">
+                                                        </span>
+                                                        <div id="tooltip-copy-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Copy
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-tooltip-target="tooltip-regenerate-1"  class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/refresh.svg" alt="Refresh">
+                                                        </span>
+                                                        <div id="tooltip-regenerate-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Regenerate
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-tooltip-target="tooltip-bad-response-1" class="rounded-lg text-token-text-secondary hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="18" height="18" src="./images/dislike.svg" alt="Dislike">
+                                                        </span>
+                                                        <div id="tooltip-bad-response-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Bad response
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <button data-dropdown-toggle="change-modal" data-dropdown-trigger="click" data-tooltip-target="tooltip-change-modal" class="rounded-lg text-token-text-secondary md:px-1 hover:bg-[#f9f9f9]">
+                                                        <span class="flex h-[30px] w-[30px] items-center justify-center">
+                                                            <img width="16" height="16" src="./images/spark.svg" alt="Spark">
+                                                            <span class="line-clamp-1 text-sm" style="opacity: 0; padding-left: 0px; width: 0px;">4o</span>
+                                                            <img width="16" height="16" src="./images/down-arrow.svg" alt="">
+                                                        </span>
+                                                        <div id="tooltip-change-modal" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                                                            Change modal
+                                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                                        </div>
+                                                    </button>
+                                                    <div id="change-modal" class="z-30 mr-3 text-[#0d0d0d] min-w-56 md:min-w-72 py-2 hidden border border-black/[0.1] bg-white rounded-lg shadow-lg">
+                                                        <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                                            <div class="flex w-full items-center justify-between">
+                                                                <div class="flex items-center gap-2 md:gap-3">
+                                                                    <div class="flex items-center justify-center md:h-7 md:w-7 md:rounded-full md:bg-[#ececec]">
+                                                                        <div class="h-4 w-4">
+                                                                            <img width="16" height="16" src="./images/star.svg" alt="Star">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div><div>GPT-4o</div><div class="text-sm text-[#b4b4b4]">Smart and fast</div></div>
+                                                                </div>
+                                                                <img class="group-hover:hidden" width="18" height="18" src="./images/check-mark.svg" alt="Tick">
+                                                                <img class="hidden group-hover:block" width="18" height="18" src="./images/refresh.svg" alt="Refresh">
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                                            <div class="flex w-full items-center justify-between">
+                                                                <div class="flex items-center gap-2 md:gap-3">
+                                                                    <div class="flex items-center justify-center md:h-7 md:w-7 md:rounded-full md:bg-[#ececec]">
+                                                                        <div class="h-4 w-4">
+                                                                            <img width="16" height="16" src="./images/fast.svg" alt="Fastest">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div><div>GPT-4o</div><div class="text-sm text-[#b4b4b4]">Fastest</div></div>
+                                                                </div>
+                                                                <img class="hidden group-hover:block" width="18" height="18" src="./images/refresh.svg" alt="Refresh">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-wrap sm:flex-nowrap justify-between items-center p-4 rounded-md bg-[#f9f9f9] text-[#7d7d7d] text-sm">
+                                                <div class="w-full sm:w-auto text-center sm:text-left mb-2 sm:mb-0 sm:mr-4">Was this response better or worse?</div>
+                                                <button title="This response was better than the previous response" class="flex-1 sm:flex-none p-2 rounded-md hover:bg-gray-200 hover:text-[#7d7d7d] text-[#b4b4b4] dark:hover:bg-gray-800 flex items-center gap-2 flex-wrap justify-center">
+                                                    <img width="16" height="16" src="./images/like-grey.svg" alt="Like">
+                                                    <span class="flex-shrink-0">Better</span>
+                                                </button>
+                                                <button title="This response was better than the previous response" class="flex-1 sm:flex-none p-2 rounded-md hover:bg-gray-200 hover:text-[#7d7d7d] text-[#b4b4b4] dark:hover:bg-gray-800 flex items-center gap-2 flex-wrap justify-center">
+                                                    <img width="16" height="16" src="./images/dislike-grey.svg" alt="DisLike">
+                                                    <span class="flex-shrink-0">Worse</span>
+                                                </button>
+                                                <button title="This response was better than the previous response" class="flex-1 sm:flex-none p-2 rounded-md hover:bg-gray-200 hover:text-[#7d7d7d] text-[#b4b4b4] dark:hover:bg-gray-800 flex items-center gap-2 flex-wrap justify-center">
+                                                    <img width="16" height="16" class="mr-1 flex-shrink-0 rounded-full border border-gray-400 dark:border-gray-300" src="./images/same-grey.svg" alt="Same">
+                                                    <span class="flex-shrink-0">Same</span>
+                                                </button>
+                                                <button title="Skip this comparison" class="flex-1 sm:flex-none p-2 rounded-md hover:bg-gray-200 hover:text-[#7d7d7d] text-[#b4b4b4] dark:hover:bg-gray-800 flex items-center gap-2 flex-wrap justify-center">
+                                                    <img width="24" height="24" src="./images/x-grey.svg" alt="X">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mx-auto text-center px-3 sm:px-0">
+                        <div class="mx-auto mt-2 inline-flex rounded-xl border border-gray-100 dark:border-gray-700">
+                            <div class="flex items-center justify-center gap-4 px-4 py-3 text-sm text-[#b4b4b4]">
+                                Is this conversation helpful so far?
+                                <div class="flex items-center gap-5">
+                                    <button class="text-[#7d7d7d] hover:text-[#0d0d0d]">
+                                        <img width="18" height="18" src="./images/like-grey.svg" alt="Like">
+                                    </button>
+                                    <button class="text-[#7d7d7d] hover:text-[#0d0d0d]">
+                                        <img width="18" height="18" src="./images/dislike-grey.svg" alt="DisLike">
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="w-px flex-1 self-stretch bg-[#ececec]"></div>
+                            <button class="p-3"><img width="18" height="18" src="./images/x.svg" alt="X"></button>
                         </div>
                     </div>
                     <!-- Chat Part -->
@@ -705,43 +1094,115 @@
           <div class="w-full md:pt-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:w-[calc(100%-.5rem)]">
             <div class="px-3 text-base md:px-4 m-auto lg:px-1 xl:px-5">
               <div class="mx-auto flex flex-1 gap-3 text-base md:gap-4 md:md:gap-6 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
-                <form action="" class="w-full">
-                  <div class="relative flex h-full max-w-full flex-1 flex-col">
-                    <div class="absolute bottom-full left-0 right-0 z-20"><div class="relative h-full w-full"><div class="flex flex-col gap-3.5 pb-3.5 pt-2"></div></div></div>
-                    <div class="flex w-full items-center">
-                      <div class="flex w-full flex-col gap-1.5 rounded-[26px] p-1.5 transition-colors bg-[#f4f4f4]">
-                        <div class="flex items-center gap-1.5 md:gap-3.5">
-                          <div>
-                            <div class="flex flex-col">
-                              <input multiple="" type="file" tabindex="-1" class="hidden" style="display: none;" />
-                              <button
-                                  type="button"
-                                  id="radix-:ra:"
-                                  aria-haspopup="menu"
-                                  aria-expanded="false"
-                                  data-state="closed"
-                                  class="text-[#0d0d0d] border border-transparent inline-flex items-center justify-center gap-1 rounded-lg text-sm dark:transparent dark:bg-transparent leading-none outline-none cursor-pointer hover:bg-[#f9f9f9] dark:hover:bg-[#f9f9f9] focus-visible:bg-[#f9f9f9] radix-state-active:text-token-text-secondary radix-disabled:cursor-auto radix-disabled:bg-transparent radix-disabled:text-token-text-tertiary dark:radix-disabled:bg-transparent m-0 h-0 w-0 border-none bg-transparent p-0"
-                              ></button>
-                              <button
-                                  class="flex items-center justify-center text-[#0d0d0d] md:h-8 md:w-8 dark:text-white md:rounded-full focus-visible:outline-black dark:focus-visible:outline-white md:mb-1 md:ml-[3px]"
-                                  aria-disabled="false"
-                              >
-                                  <img width="24" height="24" src="./images/pin.svg" alt="Pin">
-                              </button>
-                              <div type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:rc:" data-state="closed"></div>
+                <div class="relative flex h-full max-w-full flex-1 flex-col">
+                <div class="absolute bottom-full left-0 right-0 z-20"><div class="relative h-full w-full"><div class="flex flex-col gap-3.5 pb-3.5 pt-2"></div></div></div>
+                <div class="flex w-full items-center">
+                    <div class="flex w-full flex-col gap-1.5 rounded-[26px] p-1.5 transition-colors bg-[#f4f4f4]">
+                    <div class="flex items-center gap-1.5 md:gap-3.5">
+                        <div>
+                        <div class="flex flex-col">
+                            <input multiple="" type="file" tabindex="-1" class="hidden" style="display: none;" />
+                            <button
+                                type="button"
+                                id="radix-:ra:"
+                                aria-haspopup="menu"
+                                aria-expanded="false"
+                                data-state="closed"
+                                class="text-[#0d0d0d] border border-transparent inline-flex items-center justify-center gap-1 rounded-lg text-sm dark:transparent dark:bg-transparent leading-none outline-none cursor-pointer hover:bg-[#f9f9f9] dark:hover:bg-[#f9f9f9] focus-visible:bg-[#f9f9f9] radix-state-active:text-token-text-secondary radix-disabled:cursor-auto radix-disabled:bg-transparent radix-disabled:text-token-text-tertiary dark:radix-disabled:bg-transparent m-0 h-0 w-0 border-none bg-transparent p-0"
+                            ></button>
+                            <button data-dropdown-toggle="attachment-menu" data-dropdown-trigger="click" data-dropdown-placement="top"
+                                class="flex items-center justify-center text-[#0d0d0d] md:h-8 md:w-8 dark:text-white md:rounded-full focus-visible:outline-black dark:focus-visible:outline-white md:mb-1 md:ml-[3px]"
+                                aria-disabled="false"
+                            >
+                                <img width="24" height="24" src="./images/pin.svg" alt="Pin">
+                            </button>
+                            <!-- Attachment Menu -->
+                            <div id="attachment-menu" class="z-30 mr-3 text-[#0d0d0d] min-w-56 md:min-w-[340px] py-2 hidden border border-black/[0.1] bg-white rounded-lg shadow-lg">
+                                <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                    <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                        <img src="./images/drive.svg" alt="Drive">
+                                    </div>
+                                    <div class="flex flex-col">Connect to Google Drive</div>
+                                </div>
+                                <div class="hidden md:flex md:items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical" data-dropdown-toggle="onedrive-menu" data-dropdown-trigger="hover" data-dropdown-placement="right">
+                                    <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                        <img src="./images/one-drive.svg" alt="OneDrive">
+                                    </div>
+                                    <div class="flex flex-col">Connect to Microsoft OneDrive</div>
+                                    <div class="ml-auto flex items-center text-[#b4b4b4] group-data-[disabled]:opacity-50">
+                                        <img width="18" height="18" src="./images/right-arrow.svg" alt="Arrow">
+                                    </div>
+                                    <div id="onedrive-menu" class="z-30 mr-3 text-[#0d0d0d] min-w-72 py-2 hidden border border-black/[0.1] bg-white rounded-lg shadow-lg">
+                                        <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                            <div class="flex flex-col">Microsoft OneDrive Personal</div>
+                                        </div>
+                                        <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                            <div class="flex flex-col">Microsoft OneDrive for Business <div class="text-[#b4b4b4] md:text-s">Includes SharePoint</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:hidden flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                    <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                        <img src="./images/one-drive.svg" alt="OneDrive">
+                                    </div>
+                                    <div class="flex flex-col">Microsoft OneDrive Personal</div>
+                                </div>
+                                <div class="md:hidden flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                    <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                        <img src="./images/one-drive.svg" alt="OneDrive">
+                                    </div>
+                                    <div class="flex flex-col">Microsoft OneDrive for Business <div class="text-[#b4b4b4] md:text-s">Includes SharePoint</div></div>
+                                </div>
+                                <div role="separator" aria-orientation="horizontal" class="my-1.5 h-px bg-black/[0.1]"></div>
+                                <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                                    <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                                        <img src="./images/upload.svg" alt="Upload">
+                                    </div>
+                                    <div class="flex flex-col">Upload from computer</div>
+                                </div>
                             </div>
-                          </div>
-                          <div class="flex min-w-0 flex-1 flex-col"><textarea id="prompt-textarea" tabindex="0" data-id="root" dir="auto" rows="1" placeholder="Message ChatGPT" class="m-0 resize-none border-0 bg-transparent px-0 text-[#0d0d0d] focus:ring-0 focus-visible:ring-0 max-h-[25dvh]" style="height: 40px; overflow-y: hidden;"></textarea></div>
-                          <button disabled="" data-testid="fruitmd-send-button" class="mb-1 me-1 flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors hover:opacity-70 focus-visible:outline-none focus-visible:outline-black disabled:bg-[#D7D7D7] disabled:text-[#f4f4f4] disabled:hover:opacity-100 dark:bg-white dark:text-black dark:focus-visible:outline-white disabled:dark:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary"><img width="32" height="32" src="./images/top-arrow.svg" alt=""></button>
                         </div>
-                      </div>
+                        </div>
+                        <div class="flex min-w-0 flex-1 flex-col"><textarea id="prompt-textarea" tabindex="0" data-id="root" dir="auto" rows="1" placeholder="Message ChatGPT" class="m-0 resize-none border-0 bg-transparent px-0 text-[#0d0d0d] focus:ring-0 focus-visible:ring-0 max-h-[25dvh]" style="height: 40px; overflow-y: hidden;"></textarea></div>
+                        <button disabled="" data-testid="fruitmd-send-button" class="mb-1 me-1 flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-colors hover:opacity-70 focus-visible:outline-none focus-visible:outline-black disabled:bg-[#D7D7D7] disabled:text-[#f4f4f4] disabled:hover:opacity-100 dark:bg-white dark:text-black dark:focus-visible:outline-white disabled:dark:bg-token-text-quaternary dark:disabled:text-token-main-surface-secondary"><img width="32" height="32" src="./images/top-arrow.svg" alt=""></button>
                     </div>
-                  </div>
-                </form>
+                    </div>
+                </div>
+                </div>
               </div>
             </div>
             <div class="relative px-2 py-2 text-center text-xs text-token-text-secondary md:px-[60px]"><span>ChatGPT can make mistakes. Check important info.</span></div>
           </div>
+        </div>
+        <div class="group fixed bottom-3 end-3 z-10 hidden gap-1 md:bottom-2 md:end-2 md:flex md:lg:bottom-3 md:lg:end-3">
+            <button data-dropdown-toggle="info-menu" data-dropdown-trigger="click" data-dropdown-placement="top" class="flex h-6 w-6 items-center justify-center rounded-full border border-black/[0.1] text-xs text-[#7d7d7d]" type="button" aria-haspopup="menu" aria-expanded="false" data-state="closed">?</button>
+            <!-- Info Menu -->
+            <div id="info-menu" class="z-30 mr-3 text-[#0d0d0d] min-w-[320px] py-2 hidden border border-black/[0.1] bg-white rounded-lg shadow-lg">
+                <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                    <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                        <img src="./images/copy.svg" alt="Copy">
+                    </div>
+                    <div class="flex flex-col">Someone@gmail.com</div>
+                </div>
+                <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                    <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                        <img src="./images/external-link.svg" alt="External Link">
+                    </div>
+                    <a href="#" target="_blank">Help & FAQ</a>
+                </div>
+                <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                    <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                        <img src="./images/external-link.svg" alt="External Link">
+                    </div>
+                    <a href="#" target="_blank">Release notes</a>
+                </div>
+                <div class="flex items-center font-normal m-1.5 p-2.5 text-sm cursor-pointer focus-visible:outline-0 disabled:pointer-events-none disabled:opacity-50 group relative hover:bg-[#f5f5f5] focus-visible:bg-[#f5f5f5] rounded-md my-0 px-3 mx-2 state-open:bg-[#f5f5f5] gap-2.5 py-3" role="menuitem" tabindex="-1" data-orientation="vertical">
+                    <div class="flex items-center justify-center text-black/[0.1] h-5 w-5">
+                        <img src="./images/external-link.svg" alt="External Link">
+                    </div>
+                    <a href="#" target="_blank">Terms & policies</a>
+                </div>
+            </div>
         </div>
       </main>
     </div>
